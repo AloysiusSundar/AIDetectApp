@@ -57,9 +57,12 @@ load_dotenv()
 
 # Hugging Face API setup
 API_URL = "https://api-inference.huggingface.co/models/AloysiusJoy/AIDetectApp"
+HF_API_TOKEN = st.secrets["HF_API"]["HF_API_TOKEN"]  # Access the token from secrets
+
 headers = {
-    "Authorization": f"Bearer {os.getenv('HF_API_TOKEN')}"
+    "Authorization": f"Bearer {HF_API_TOKEN}"
 }
+
 
 # Prediction function using Hugging Face Inference API
 def query(payload):
