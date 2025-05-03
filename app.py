@@ -51,9 +51,6 @@ if st.button("Predict"):
 
 import streamlit as st
 import requests
-import os
-from dotenv import load_dotenv
-load_dotenv()
 
 # Hugging Face API setup
 API_URL = "https://api-inference.huggingface.co/models/AloysiusJoy/AIDetectApp"
